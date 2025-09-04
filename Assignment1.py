@@ -7,9 +7,7 @@
 # List Specific resources used to complete the assignment. while loop, if, else.
 
 choice = ""
-
-# Ask for choice input at the start
-buffer = input("Enter initial buffer data: ")
+buffer = ""
 
 while choice != "4":
     #loops the program until 4 is chosen
@@ -19,19 +17,18 @@ while choice != "4":
     print("3. Display the input buffer")
     print("4. Exit the program")
 
-    choice = input("Enter your choice (1-4): ")
+    choice = input("Enter your choice (1-4): ").strip()
 #entering choice
     if choice == "1":
-        data = input("Enter a string to append: ")
-        buffer += data   # appends then prints that the data was appended
+        data = input("Enter a string to append: ").strip()  # appends then prints that the data was appended
+        buffer += data
         print("Data appended.")
     elif choice == "2":
         buffer = ""  #if 2 is selected buffer gets cleared
         print("Buffer cleared.")
     elif choice == "3":
-        print("Current buffer:", buffer)  # prints the current buffer
+        print("Current buffer:", buffer) # prints the current buffer
     elif choice != "4":
         print("Invalid choice. Please enter 1-4.") # end of the loop
 
 print("Exiting program.")
-
