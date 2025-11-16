@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS temperatures (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  day_of_week TEXT NOT NULL,
+  temperature_value REAL NOT NULL
+);
